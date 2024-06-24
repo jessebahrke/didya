@@ -3,47 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesse Bahrke</title>
+    <title>Mobile Device Mockup</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: #ffffff; /* Set background color to white */
+            background-color: #f0f0f0;
         }
-        .container {
-            text-align: center;
-            margin-top: 100px;
+        .phone {
+            width: 375px;  /* Typical width for a mobile device */
+            height: 667px; /* Typical height for a mobile device */
+            background-color: white;
+            border: 16px solid #ccc;
+            border-radius: 36px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
-        h1 {
-            color: #333;
+        .phone::before {
+            content: '';
+            width: 60px;
+            height: 5px;
+            background: #333;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        p {
-            color: #666;
+        .phone::after {
+            content: '';
+            width: 35px;
+            height: 35px;
+            background: #333;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        a {
-            font-size: large;
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: underline;
+        .screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background: #f8f9fa;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Jesse Bahrke, M.S., LPC</h1>
-        <p>Thank you for visiting!</p>
-        <hr>
-        <a href="https://jessebahrke.github.io/Bahrke_CV.pdf" target="_blank">Link to my CV</a>
-        <hr>
-        <a href="https://jessebahrke.github.io/APS_Poster.pdf" target="_blank">Link to APS Poster</a>
-        <hr>
-        <a href="https://jessebahrke.github.io/APS_2024_Support.pdf" target="_blank">Link to APS Poster Supporting Document</a>
-        <hr>
-        <a href="https://jessebahrke.github.io/MPA_Poster.pdf" target="_blank">Link to MPA Poster</a>
-        <hr>
+    <div class="phone">
+        <div class="screen">
+            <!-- Content for the "screen" of the phone goes here -->
+        </div>
     </div>
 </body>
 </html>
